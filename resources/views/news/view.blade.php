@@ -1,26 +1,60 @@
+@extends('layouts.site')
 
-<nav>
-    <ul class="nav">
-        <li><a href="/">Главная</a></li>
-        <li class="active"><a href="/news/">Новости</a></li>
-        <li><a href="/gallery/">Галерея</a></li>
-        <li><a href="/feedback/">Обратная связь</a></li>
-    </ul>
-</nav>
-<section>
+@section('content')
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <nav class="top_menu">
+                <ul>
+                    <li><a href="/">Главная</a></li>
+                    <li class="active"><a href="/news/">Новости</a></li>
+                    <li><a href="/gallery/">Галерея</a></li>
+                    <li><a href="/feedback/">Обратная связь</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <section class="content-wrapper">
+        <div class="row">
+            <div class="col-md-9">
+                <div class="article">
+                    @if($article)
 
-    <div id="content">
-        <div class="post">
-            <h2 class="title"><a href='/news/<?php echo $newsItem['id']; ?>'><?php echo $newsItem['title'] . ' # ' . $newsItem['id']; ?></a></h2>
-            <p class="meta"><?php echo $newsItem['date']; ?>
-                &nbsp;&bull;&nbsp; <a href='/news/' class="permalink"> Назад</a></p>
-            <div class="entry">
-                <p><img src='/template/<?php echo $newsItem['preview']; ?>' width=33% height = 33% alt="" vspace='5' hspace='8' /></p>
-                <p><?php echo $newsItem['content']; ?></p>
+                    <div class="post">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h2 class="title">{{$article->title}}</h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-5">
+                                <div class="img-wrapper">
+                                    <img src="{{asset($article->preview)}}" alt="">
+                                </div>
+                            </div>
+
+                            <div class="entry">
+                                <p>{!!$article->content!!}</p>
+                            </div>
+                        </div>
+                    </div>
+                    @endif
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="categories_bar">
+                    <h2>Категории</h2>
+                    <ul>
+                        @foreach($categories as $item)
+                        <li><a href="/category/{{$item->id}}">{{$item->name}}</a></li>
+                        @endforeach
+                    </ul>
+                </div>
             </div>
         </div>
-        <p><a href='/news/' class="permalink"> Назад</a></p>
-        <div style="clear: both;">&nbsp;</div>
-    </div>
+    </section>
+</div>
 
-</section>
+@endsection
+
+

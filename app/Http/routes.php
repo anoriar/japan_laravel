@@ -20,3 +20,5 @@ Route::get('/', 'IndexController@index');
 Route::get('/news', 'NewsController@index');
 Route::get('/gallery', 'GalleryController@index');
 Route::get('/feedback', 'FeedbackController@index');
+Route::get('/news/{id}', 'NewsController@show');
+Route::get('/category/{id}', 'NewsController@showCategory');

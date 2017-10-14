@@ -50,6 +50,8 @@ h1 {
 
 h2{
     font-size: 1.5em;
+    margin: 0;
+    padding: 0;
 }
 
 p{
@@ -111,41 +113,43 @@ p{
     width: 20%;
 }
 
-.post {
-    padding: 20px 0 20px 0;
+.content-wrapper{
+    padding: 20px 10px;
 }
 
-.post .title {
-    margin: 0;
+.post {
+    padding: 10px;
+}
+
+.post .title{
+    margin-bottom: 20px;
+}
+
+
+.post .entry {
+    text-align: justify;
+}
+
+.img-wrapper img{
+   width: 100%;
+   height: 100%;
+   display: inline-block;
+}
+
+.img-wrapper{
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
 }
 
 .categories_bar{
     border: 4px solid #9ABADD;
     border-radius: 5px;
-    padding: 10px 20px 10px 20px;
+    padding: 30px 25px 30px 25px;
+    line-height: 30px;
 }
 
 .categories_bar h2{
     text-align: center;
 }
-
-.post .entry {
-    text-align: justify;
-    display: inline-block;
-}
-
-.post .entry img{
-    float: left;
-}
-
-
-
-
-
-
-
-
-
-
-
-

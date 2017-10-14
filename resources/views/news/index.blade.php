@@ -14,32 +14,46 @@
             </nav>
         </div>
     </div>
-    <section>
+    <section class="content-wrapper">
         <div class="row">
             <div class="col-md-9">
-                <div id="news_list">
+                <div class="news-list">
                     @foreach($news as $item)
                     <div class="post">
-                        <h2 class="title"><a href='/news/{{$item->id}}'>{{$item->title}}</a></h2>
-                        <p class="meta">{{$item->date}}
-                            &nbsp;&bull;&nbsp; <a href='/news/{{$item->id}}' class="permalink"> Подробнее</a>
-                        </p>
-                        <div class="entry">
-                            <p>{!!$item->short_content!!}</p>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h2 class="title"><a href='/news/{{$item->id}}'>{{$item->title}}</a></h2>
+                            </div>
                         </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="img-wrapper">
+                                    <img src="{{asset($item->preview)}}" alt="">
+                                </div>
+                            </div>
+                            
+                                <p class="meta">{{$item->date}}
+                                    &nbsp;&bull;&nbsp; <a href='/news/{{$item->id}}' class="permalink"> Подробнее</a>
+                                </p>
+                                <br>
+                                <div class="entry">
+                                    <p>{!!$item->short_content!!}</p>
+                                </div>
+                            
+                        </div>
+
                     </div>
                     @endforeach
-                    <div style="clear: both;">&nbsp;</div>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="categories_bar">
-                     <h2>Категории</h2>
-                     <ul>
-                         @foreach($categories as $item)
-                            <li><a href="category/{{$item->id}}">{{$item->name}}</a></li>
-                         @endforeach
-                     </ul>
+                    <h2>Категории</h2>
+                    <ul>
+                        @foreach($categories as $item)
+                        <li><a href="/category/{{$item->id}}">{{$item->name}}</a></li>
+                        @endforeach
+                    </ul>
                 </div>
             </div>
         </div>
