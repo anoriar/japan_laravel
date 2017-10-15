@@ -1,123 +1,55 @@
+/*==========  Desktop First Method  ==========*/
 
-@media only screen and (min-width: 240px) and (max-width: 600px) { 
-    .nav li {
-        display: block;
-        float: none;
-        width: 100%;
-    }
-    .nav li a {
-        border-bottom: 0.5px solid #ccc;
-        border-top: 0.5px solid #ccc;
-    }
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+	
+}
 
-    h1 {
-        font-size: 14px;	
-    }
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
 
-    h2{
-        font-size: 11px;
-    }
+}
 
-    p, a, .feedback{
-        font-size: 9px;
-    }
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+	
 
-    ul.nav a{
-        font-size: 9px;
-    }
+}
 
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+	
+}
 
-
-    .inp[name="name"], .inp[name="email"]{
-        width: 120px;
-    }
-
-    .inp[name="theme"], .inp[name="message"]{
-        width: 180px;
-    }
-
-    .inp[name="btn"]{
-        background-color: #bde0ff;
-        width: 90px;
-    }
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
 
 }
 
 
-@media only screen and (min-width: 480px) and (max-width: 600px) {  
+/*==========  Mobile First Method  ==========*/
 
-    h1 {
-        font-size: 16px;	
-    }
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
 
-    h2{
-        font-size: 13px;
-    }
-
-    p, a, .feedback{
-        font-size: 9px;
-    }
-
-    ul.nav a{
-        font-size: 9px;
-    }
-
-
-
-
-    .inp[name="btn"]{
-        background-color: #bde0ff;
-        width: 110px;
-    }
 }
 
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
 
-
-@media screen and (min-width: 600px) and (max-width: 800px) { 
-
-    h1 {
-        font-size: 20px;
-    }
-
-    h2{
-        font-size: 15px;
-    }
-
-    p, a, .feedback{
-        font-size: 11px;
-    }
-
-
-    ul.nav a{
-        font-size: 11px;
-    }
-
-
-    .inp[name="btn"]{
-        background-color: #bde0ff;
-        width: 150px;
-    }
 }
 
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
 
-@media screen and (min-width: 800px) and (max-width: 1000px) { 
+}
 
-    h1 {
-        font-size: 25px;
-    }
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
 
-    p, a, .feedback{
-        font-size: 18px;
-    }
+}
 
+ /* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
 
-    ul.nav a{
-        font-size: 13px;
-    }
-
-
-    .inp[name="btn"]{
-        background-color: #bde0ff;
-        width: 150px;
-    }
 }

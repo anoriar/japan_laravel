@@ -1,18 +1,7 @@
--- phpMyAdmin SQL Dump
--- version 4.0.10deb1
--- http://www.phpmyadmin.net
---
--- Хост: 127.0.0.1
 
--- База данных: `japan`
---
+USE japan;
 
--- --------------------------------------------------------
-
---
--- Структура таблицы `news`
---
-
+DROP TABLE IF EXISTS news;
 CREATE TABLE IF NOT EXISTS `news` (
   `id` int(11) NOT NULL,
   `title` varchar(255) NOT NULL,
@@ -25,9 +14,6 @@ CREATE TABLE IF NOT EXISTS `news` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Дамп данных таблицы `news`
---
 
 INSERT INTO `news` (`id`, `title`, `date`, `short_content`, `content`, `preview`, `type`, `category_id`) VALUES
 (1, 'Овощная кондитерская: в Японии готовят уникальные торты-салаты.', '2016-05-12 13:05:04', '<p>В одном из ресторанов японской Нагои подают салаты, которые на первый взгляд легко спутать с произведениями кондитерского искусства.</p>', '<p>В одном из ресторанов японской Нагои подают салаты, которые на первый взгляд легко спутать с произведениями кондитерского искусства. Владельцы кафе рассказывают, что их торты точно не испортят фигуру, ведь они приготовлены из овощей, в них нет ни грамма сахара и пшеничной муки. Коржи для этих угощений выпекают из соевой муки, а вместо крема используют тофу. Сейчас в меню кафе около 50 тортов.</p>', 'images/news/news1.jpg', 'NewsPublication', 3),
@@ -36,26 +22,19 @@ INSERT INTO `news` (`id`, `title`, `date`, `short_content`, `content`, `preview`
 (4, 'Фукусима примет матчи по бейсболу и софтболу на Олимпийских играх в 2020 году', '2016-05-12 00:00:00', '<p>Японский город Фукусима примет матчи олимпийских турниров по бейсболу и софтболу в 2020 году вместе с Токио.</p>', '<p>Японский город Фукусима примет матчи олимпийских турниров по бейсболу и софтболу в 2020 году вместе с Токио. \n				«Игры пройдут в Токио, но как минимум один матч, скорее всего, матч-открытие, пройдёт в Фукусиме», — цитирует Reuters главу организационного комитета Игр Йосиро Мори. \n\n				Мори добавил, что идея перенести некоторые соревнования в Фукусиму появилась в октябре 2016 года у президента МОК Томаса Баха и премьер-министра Японии Синдзо Абэ.</p>', 'images/news/news4.jpg', 'NewsPublication', 2),
 (5, 'День совершеннолетия в Японии', '2017-05-12 00:00:00', '<p>В Японии отмечают День совершеннолетия, который является государственным праздником.</p>', '<p>В Японии отмечают День совершеннолетия, который является государственным праздником. В торжествах принимают участие все японцы, которым в нынешнем году уже исполнилось или исполнится 20 лет.\n\nВ этот день девушки наряжаются в традиционные кимоно с длинными рукавами фурисодэ и меховую накидку. Юноши надевают строгие костюмы или мужские кимоно. В честь виновников торжества городские власти устраивают праздничные мероприятия и вручают памятные подарки.</p> ', 'images/news/news5.jpg', 'NewsPublication', 3);
 
--- --------------------------------------------------------
 
---
--- Структура таблицы `users`
---
-
-CREATE TABLE IF NOT EXISTS `users` (
+DROP TABLE IF EXISTS feedbacks;
+CREATE TABLE IF NOT EXISTS `feedbacks` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(45) NOT NULL,
+  `username` varchar(45) NOT NULL,
   `email` varchar(60) NOT NULL,
   `theme` text NOT NULL,
   `message` longtext NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=24 ;
 
---
--- Дамп данных таблицы `users`
---
 
-INSERT INTO `users` (`id`, `name`, `email`, `theme`, `message`) VALUES
+INSERT INTO `feedbacks` (`id`, `username`, `email`, `theme`, `message`) VALUES
 (14, '1', 'yygy@gmail.com', '3', '4'),
 (15, 'we', 're@fds.fd', 'dfs', 'fff'),
 (16, 'we', 're@fds.fd', 'dfs', 'fff'),
@@ -66,9 +45,8 @@ INSERT INTO `users` (`id`, `name`, `email`, `theme`, `message`) VALUES
 (22, 'anoriar', 'ano@gmail.com', 'Hi', 'Привет'),
 (23, 'ale', 'ert@mail.ru', 'das', 'asffgdg');
 
---
--- Структура таблицы `categories`
---
+
+DROP TABLE IF EXISTS categories;
 CREATE TABLE IF NOT EXISTS `categories` (
   `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
@@ -80,9 +58,7 @@ INSERT INTO `categories` (`id`, `name`) VALUES
 (2, 'Спорт'),
 (3, 'Прочее');
 
---
--- Структура таблицы `gallery`
---
+DROP TABLE IF EXISTS gallery;
 CREATE TABLE IF NOT EXISTS `gallery` (
   `id` int(11) NOT NULL,
   `image` varchar(255) NOT NULL,
@@ -104,6 +80,4 @@ INSERT INTO `gallery` (`id`, `image`) VALUES
 (12, 'images/gallery/g12.jpg'),
 (13, 'images/gallery/g13.jpg');
 
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+

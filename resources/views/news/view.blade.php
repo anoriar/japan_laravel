@@ -1,20 +1,9 @@
 @extends('layouts.site')
 
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <nav class="top_menu">
-                <ul>
-                    <li><a href="/">Главная</a></li>
-                    <li class="active"><a href="/news/">Новости</a></li>
-                    <li><a href="/gallery/">Галерея</a></li>
-                    <li><a href="/feedback/">Обратная связь</a></li>
-                </ul>
-            </nav>
-        </div>
-    </div>
-    <section class="content-wrapper">
+
+<section class="content-wrapper">
+    <div class="container">
         <div class="row">
             <div class="col-md-9">
                 <div class="article">
@@ -52,9 +41,8 @@
                 </div>
             </div>
         </div>
-    </section>
-</div>
-
+    </div>
+</section>
 @endsection
 
 
