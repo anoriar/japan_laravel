@@ -30,18 +30,20 @@
                         </header>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <nav class="top_menu">
+
+                <nav class="top_menu">
+                    <div class="row">
+                        <div class="col-md-12">
                             <ul>
                                 <li><a href="/">Главная</a></li>
                                 <li><a href="/news">Новости</a></li>
                                 <li><a href="/gallery">Галерея</a></li>
                                 <li><a href="/feedback">Обратная связь</a></li>
                             </ul>
-                        </nav>
+                        </div>
                     </div>
-                </div>
+                </nav>
+
             </div>
         </header>
 
